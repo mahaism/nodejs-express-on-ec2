@@ -3,24 +3,22 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-    res.send('<h1>WExpress Demo App</h1> <h4>Message: Success</h4> <p>Version 1.0</p?');
+  res.send('<h1>Express Demo App</h1> <h4>Message: Success</h4> <p>Version 1.1</p>');
 })
 
-app.get('/production', (req, res) => {
-    res.send{[ 
+app.get('/products', (req, res) => {
+  res.send([
     {
-        product: '101',
-        price: 100
+      productId: '101',
+      price: 100
     },
     {
-        product: '102',
-        price: 160
-
+      productId: '102',
+      price: 150
     }
-  ]}
-
+  ])
 })
 
-app.listen(port, {}=> {
-    console.log(`Demo app up and listening to port: ${port}`)
+app.listen(port, ()=> {
+  console.log(`Demo app is up and listening to port: ${port}`);
 })
